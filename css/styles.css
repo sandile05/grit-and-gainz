@@ -3,6 +3,7 @@
     --secondary-color: #38BDF8; /* Vibrant Blue - Stands out on dark background */
     --tertiary-color: #F87171; /* Warm Red - Complements the theme */
     --bg-color: #0F172A; /* Deep Navy Blue - True dark mode */
+    --bg-color-2: #1f2738;
     --text-color: #E2E8F0; /* Soft Light Gray - Easy on the eyes */
     --font-primary: 'Poppins', sans-serif; /* Adjust as needed */
 }
@@ -13,6 +14,10 @@
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
+}
+
+html, body {
+    height: 100%; /* Ensure HTML and body take up full height */
 }
 
 body {
@@ -45,4 +50,124 @@ p {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--bg-color-2);
+    height: 50px;
+}
+
+nav a img {
+    height: 50px; /* Adjust logo size */
+}
+
+/* Desktop Nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Contact Button */
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--tertiary-color);
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Nav Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 50vh;
+        background-color: var(--bg-color-2);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.5s ease-in-out;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Animate burger menu to X */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
