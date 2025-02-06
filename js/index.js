@@ -16,4 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
             menuToggle.classList.remove("active");
         });
     });
+
+     // Close menu when clicking outside of it
+     document.addEventListener("click", function (event) {
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove("active");
+            menuToggle.classList.remove("active");
+        }
+    });
 });
