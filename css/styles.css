@@ -189,24 +189,85 @@ nav a img {
     transform: scale(1.05);
 }
 
-
-
-/* Responsive (Mobile: Stack Layout) */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image img {
-        width: 250px;
-        height: 250px;
-    }
+/* Programs Section */
+.programs {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
 }
+
+.programs h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Programs Grid */
+.programs-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Program Card */
+.program-card {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Program Icons */
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Program Titles */
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Program Description */
+.program-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--bg-color-2);
+}
+
+/* Buttons */
+.programs .btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--tertiary-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+   
+}
+
+
 
 
 /* Mobile Nav Styles */
@@ -258,5 +319,10 @@ nav a img {
     .hero-image img {
         width: 250px;
         height: 250px;
+    }
+
+    .programs-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
