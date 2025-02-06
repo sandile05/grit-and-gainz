@@ -134,6 +134,80 @@ nav a img {
     transition: all 0.3s ease-in-out;
 }
 
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+    text-align: left;
+    gap: 2rem;
+}
+
+/* Hero Text */
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+.hero .btn{
+    margin-top: 1rem;
+}
+
+/* Hero Image (Circular Style) */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Responsive (Mobile: Stack Layout) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
 /* Mobile Nav Styles */
 @media (max-width: 768px) {
     .nav-links {
@@ -169,5 +243,19 @@ nav a img {
 
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
     }
 }
