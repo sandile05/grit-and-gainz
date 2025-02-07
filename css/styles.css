@@ -31,10 +31,36 @@ h1 {
     font-size: 2.5rem;
 }
 
+
 h2 {
-    color: var(--secondary-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
 }
+
+/* Before & After Underline Effect */
+h2::before,
+h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: var(--secondary-color);
+    width: 100%;
+    bottom: -8px;
+    transition: width 0.3s ease-in-out;
+}
+
+h2::before {
+    left: -30px;
+}
+
+h2::after {
+    right: -30px;
+}
+
+
 
 h3 {
     color: var(--tertiary-color);
@@ -137,38 +163,40 @@ nav a img {
 /* Hero Section */
 .hero {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 2rem;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     background-color: var(--bg-color);
-    text-align: left;
-    gap: 2rem;
-    min-height: 100vh;
+    min-height: 100vh; /* Full viewport height */
+    padding: 4rem 2rem;
+}
+
+/* Container for Alignment */
+.hero-container {
+    display: flex;
+    align-items: center; /* Vertically aligns content */
+    justify-content: center; /* Centers both elements */
+    gap: 1rem; /* Adds spacing */
+    max-width: 900px;
+    width: 100%;
 }
 
 /* Hero Text */
 .hero-content {
     flex: 1;
     max-width: 50%;
+    text-align: left;
+    text-align: center;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text-color);
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
+.hero-content p{
     margin-top: 1rem;
 }
 
-.hero .btn{
-    margin-top: 1rem;
+.hero-content .btn{
+    margin-top: 2rem;
 }
 
-/* Hero Image (Circular Style) */
+/* Hero Image */
 .hero-image {
     flex: 1;
     display: flex;
@@ -176,18 +204,15 @@ nav a img {
 }
 
 .hero-image img {
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height: 380px;
     object-fit: cover;
     border-radius: 50%;
     border: 6px solid var(--primary-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
 }
 
-.hero-image img:hover {
-    transform: scale(1.05);
-}
+
 
 /* Programs Section */
 .programs {
@@ -244,7 +269,7 @@ nav a img {
 .program-card p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: var(--bg-color-2);
+    color: var(--bg-color);
 }
 
 /* Buttons */
@@ -262,10 +287,6 @@ nav a img {
     background-color: var(--secondary-color);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-   
-}
 
 
 
@@ -312,17 +333,24 @@ nav a img {
         text-align: center;
     }
 
+    .hero-container {
+        flex-direction: column-reverse; /* Reverse the order for mobile */
+        text-align: center; /* Center text */
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+    }
+
     .hero-content {
-        max-width: 100%;
+        max-width: 90%; /* Allow content to take up most of the screen width */
     }
 
     .hero-image img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px; /* Adjust image size for mobile */
     }
 
-    .programs-container {
-        flex-direction: column;
-        align-items: center;
+    .hero-content .btn {
+        margin-top: 1.5rem;
     }
 }
+    
+
