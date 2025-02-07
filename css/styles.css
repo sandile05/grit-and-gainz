@@ -151,6 +151,7 @@ nav a img {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    color: var(--bg-color);
 }
 
 .btn a {
@@ -369,14 +370,102 @@ nav a img {
 .fast-action {
     margin-top: 3rem; /* Space between snapshots and button */
     text-align: center;
-}
 
+}
 
 
 .fast-action .btn:hover {
     background-color: var(--tertiary-color);
     transform: scale(1.05);
 }
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary-color); /* Dark Blue Background */
+    color: var(--bg-color); /* Light text color */
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color); /* Vibrant Yellow on hover */
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: var(--bg-color-2);
+}
+
+.footer-social .social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    /* padding: 1rem 0; */
+    font-size: 0.9rem;
+    background-color: var(--primary-color); /* Matching dark blue for the bottom */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  
+}
+
 
 
 /* Mobile Nav Styles */
@@ -451,6 +540,21 @@ nav a img {
     .fast-action .btn {
         padding: 1rem 2rem;
         font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .footer-social {
+        margin-top: 1rem;
+        justify-content: center;
     }
 }
 
