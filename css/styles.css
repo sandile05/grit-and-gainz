@@ -87,6 +87,22 @@ button {
     border: none;
 }
 
+header {
+    position: fixed; /* Make the nav fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color); /* Background color */
+    z-index: 1000; /* Ensure it stays above other content */
+    /* padding: 1rem 2rem; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a small shadow for effect */
+}
+
+main {
+    padding-top: 80px; /* Adjust this value based on the height of your nav */
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
