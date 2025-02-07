@@ -31,6 +31,10 @@ h1 {
     font-size: 2.5rem;
 }
 
+.tertiary{
+    color: var(--tertiary-color);
+}
+
 
 h2 {
     font-size: 2.5rem;
