@@ -349,11 +349,18 @@ nav a img {
     font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-   
+/* Fast Action Button */
+.fast-action {
+    margin-top: 3rem; /* Space between snapshots and button */
+    text-align: center;
 }
 
+
+
+.fast-action .btn:hover {
+    background-color: var(--tertiary-color);
+    transform: scale(1.05);
+}
 
 
 /* Mobile Nav Styles */
@@ -423,6 +430,25 @@ nav a img {
 
     .snapshot-item {
         max-width: 100%;
+    }
+
+    .fast-action .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-snapshots .section-title {
+        font-size: 2rem; /* Slightly smaller title on mobile */
+    }
+
+    .success-snapshots .section-subtitle {
+        font-size: 1rem; /* Adjust subtitle size for mobile */
+    }
+
+    .snapshot-item {
+        max-width: 100%; /* Ensure snapshots take full width */
     }
 }
     
