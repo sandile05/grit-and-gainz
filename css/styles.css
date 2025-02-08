@@ -461,6 +461,99 @@ nav a img {
     margin: 0;
 }
 
+
+/* about us  */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* About Hero */
+.about-hero {
+    padding: 5rem 0;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+/* Why Train With Us */
+.why-train {
+    background-color: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.why-train h2 {
+    color: var(--accent-color);
+}
+
+.train-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.train-item {
+    background: var(--tertiary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+}
+
+/* Fun Facts */
+.fun-facts {
+    background-color: var(--primary-color);
+    padding: 4rem 0;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.fact {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Call to Action */
+.about-cta {
+    background-color: var(--secondary-color);
+    padding: 4rem 0;
+}
+
+.about-cta .btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.about-cta .btn:hover {
+    background: var(--text-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+   
+}
+
+
 /* Responsive Design for Footer */
 @media (max-width: 768px) {
   
@@ -555,6 +648,15 @@ nav a img {
     .footer-social {
         margin-top: 1rem;
         justify-content: center;
+    }
+
+    .train-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .train-item {
+        width: 30%;
     }
 }
 
