@@ -24,4 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
             menuToggle.classList.remove("active");
         }
     });
+
+    const slider = document.querySelector(".slider-range");
+    const afterImage = document.querySelector(".slider .after");
+
+    slider.addEventListener("input", (e) => {
+        let percentage = e.target.value;
+        afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+    });
 });
