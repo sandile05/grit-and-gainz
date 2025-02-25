@@ -523,6 +523,129 @@ nav a img {
     font-weight: bold;
 }
 
+/* Fun Facts Section */
+.fun-facts {
+    background: var(--bg-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.fun-facts h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.facts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Individual Fact Box */
+.fact {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fact:hover {
+    transform: scale(1.05);
+}
+
+/* Fact Numbers */
+.fact h3 {
+    font-size: 2rem;
+    color: var(--tertiary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Fact Description */
+.fact p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* About CTA Section */
+.about-cta {
+    background: var(--bg-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centering the Content */
+.about-cta .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* CTA Heading */
+.about-cta h2 {
+    font-size: 2rem;
+    max-width: 600px;
+    font-weight: 700;
+}
+
+/* CTA Button */
+.about-cta .btn {
+    background: var(--tertiary-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.about-cta .btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .about-cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-cta .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .facts-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fact {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
 /* pricing  */
 /* Base pricing styles */
 .pricing {
@@ -693,7 +816,8 @@ nav a img {
 }
 
 .cta .btn:hover {
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 
@@ -811,52 +935,6 @@ nav a img {
         padding: 1.2rem;
     }
 
-
-/* Fun Facts */
-.fun-facts {
-    background-color: var(--bg-color);
-    padding: 4rem 0;
-}
-
-.facts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.fact {
-    background: var(--secondary-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-/* Call to Action */
-.about-cta {
-    background-color: var(--secondary-color);
-    padding: 4rem 0;
-}
-
-.about-cta .btn {
-    background: var(--bg-color);
-    color: var(--primary-color);
-    padding: 1rem 2rem;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
-}
-
-.about-cta .btn:hover {
-    background: var(--text-color);
-    color: var(--secondary-color);
-}
-
-.pricing-card {
-    width: 100%; /* Full width on mobile */
-    margin-bottom: 2rem; /* Spacing between cards */
-}
 }
 
 @media (max-width: 480px) {
