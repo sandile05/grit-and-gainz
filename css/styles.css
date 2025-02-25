@@ -687,6 +687,38 @@ nav a img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--tertiary-color);
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta .btn {
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta .btn:hover {
+    background-color: var(--bg-color);
+}
+
+
 
 
 
