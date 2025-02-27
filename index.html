@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
      <!-- Header Section -->
@@ -94,6 +94,36 @@
                 <a href="#contact" class="btn">Start Now!</a>
             </div>
         </section>    
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide testimonial">
+                            <p>"Best training experience ever! My transformation has been amazing!"</p>
+                            <h4>- Alex J.</h4>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide testimonial">
+                            <p>"The coaches are super motivating, and the results are real!"</p>
+                            <h4>- Jamie L.</h4>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide testimonial">
+                            <p>"I've never felt stronger. Highly recommend this gym!"</p>
+                            <h4>- Chris D.</h4>
+                        </div>
+                    </div>
+                    <!-- Pagination & Navigation -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer class="footer">
@@ -130,5 +160,16 @@
     </footer>
 
     <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.testimonials-slider', {
+            loop: true,
+            spaceBetween: 20,
+            autoplay: { delay: 5000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+    </script>
+    
 </body>
 </html>

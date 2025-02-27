@@ -379,6 +379,52 @@ nav a img {
     transform: scale(1.05);
 }
 
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--dark-bg);
+    color: var(--light-text);
+}
+
+.testimonials h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Swiper */
+.testimonials-slider {
+    max-width: 700px;
+    margin: auto;
+}
+
+.testimonial {
+    background: var(--tertiary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Swiper Navigation & Pagination */
+.swiper-pagination {
+    margin-top: 1rem;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: var(--primary-color);
+}
+
+
 /* Footer */
 .footer {
     background: var(--primary-color);
