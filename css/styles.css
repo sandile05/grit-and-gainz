@@ -368,7 +368,7 @@ nav a img {
 
 /* Fast Action Button */
 .fast-action {
-    margin-top: 3rem; /* Space between snapshots and button */
+    margin: 0rem 0rem 2rem; /* Space between snapshots and button */
     text-align: center;
 
 }
@@ -403,6 +403,18 @@ nav a img {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .testimonial p {
