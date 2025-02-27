@@ -793,10 +793,11 @@ nav a img {
 
 /* Transformations Hero Section */
 .transformations-hero {
-    background: var(--bg-color);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url('../img/programs-bg.jpg') center/cover;
     color: var(--bg-color);
     text-align: center;
     padding: 4rem 2rem;
+    margin-top: -28px;
 }
 
 .transformations-hero h1 {
